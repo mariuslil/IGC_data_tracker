@@ -59,6 +59,7 @@ func igcHandler(w http.ResponseWriter, r *http.Request){
 	w.Header().Set("Content-Type", "application/json")
 	URL := strings.Split(r.URL.Path, "/")
 
+	/*		Need to find a way to make this work properly
 	if URL[5] != "" && r.Method == "GET"{
 
 		i, err := strconv.Atoi(URL[4])
@@ -69,7 +70,10 @@ func igcHandler(w http.ResponseWriter, r *http.Request){
 
 		field(w, r, i, URL[5])
 
-	} else if URL[4] != "" && r.Method == "GET"{
+	}
+	*/
+
+	if URL[4] != "" && r.Method == "GET"{
 
 		u, err := strconv.Atoi(URL[4])
 		if err != nil{
